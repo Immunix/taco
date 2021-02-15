@@ -16,12 +16,10 @@
         android:layout_height="match_parent"
         tools:context=".ui.fragments.CategoryListFragment">
 
-        <TextView
-            android:id="@+id/message"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{viewModel.totalTacoCategories}"
-            tools:text="Loaded XX categories"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

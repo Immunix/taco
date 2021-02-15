@@ -15,7 +15,7 @@ interface FoodDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAsync(food: Food)
 
-    @Query("SELECT * FROM food")
-    suspend fun getAllAsync(): List<Food>
+    @Query("SELECT * FROM food WHERE description LIKE '%' || :searchQuery || '%'")
+    suspend fun getAllAsync(searchQuery: String): List<Food>
 
 }

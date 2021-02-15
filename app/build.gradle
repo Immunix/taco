@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-parcelize'
 }
 
 apply plugin: 'kotlin-kapt'
@@ -22,6 +23,7 @@ android {
     }
     buildFeatures {
         dataBinding true
+        viewBinding true
     }
     buildTypes {
         release {

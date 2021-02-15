@@ -20,7 +20,7 @@ class CategoriesViewModel @ViewModelInject constructor(
         } catch (e: Exception) {
             Timber.e(e)
         }
-    }.map { "Loaded ${it.size} categories\nImplement a list view and show all category elements." }
+    }.map { it }
 
 
 }
